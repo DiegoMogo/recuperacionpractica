@@ -49,9 +49,33 @@ private String input,Answer;
             input+=Answer;
             break;
         case "x":
-            input+="*"
+            Solve();
+            input+="*";
             break;
-            case "^"
+        case "^":
+            Solve();
+            input+="^";
+            break;
+        case"=":
+            Solve();
+            Answer=input;
+            break;
+        case "<--":
+            String newText=input.substring(0,input.length()-1);
+            input=newText;
+            break;
+        default:
+            if(input==null){
+                input="";
+            }
+            if(data.equals("+") || data.equals("-") || data.equals("/")){
+                Solve();
+            }
+            input+=data;
     }
+    Screen.setText(input);
+}
+private void Solve(){
+
 }
 }
