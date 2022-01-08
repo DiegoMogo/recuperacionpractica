@@ -60,7 +60,7 @@ private String input,Answer;
             Solve();
             Answer=input;
             break;
-        case "<--":
+        case "⬅":
             String newText=input.substring(0,input.length()-1);
             input=newText;
             break;
